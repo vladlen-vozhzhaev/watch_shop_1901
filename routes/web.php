@@ -20,7 +20,11 @@ Route::get('/', function () {
 });
 Route::view('/addItem', 'pages.addItem');
 Route::post('/addItem', [\App\Http\Controllers\ItemController::class, 'addItem']);
-
+Route::get('/productDetails/{id}', function (\Illuminate\Http\Request $request){
+    $itemId = $request->id;
+    $item = \App\Models\Item::where('id', $itemId)->first();
+    return view('pages.productDetails', ['item'=>$item]);
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
