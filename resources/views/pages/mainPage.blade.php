@@ -68,7 +68,7 @@
                             <div class="popular-img">
                                 <img src="{{$item->img}}" alt="">
                                 <div class="img-cap">
-                                    <span>Добавить в корзину</span>
+                                    <span onclick="location.href='/cart/addItem/{{$item->id}}'">Добавить в корзину</span>
                                 </div>
                                 <div class="favorit-items">
                                     <span class="flaticon-heart"></span>

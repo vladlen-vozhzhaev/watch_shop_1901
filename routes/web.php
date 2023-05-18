@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,8 @@ Route::get('/productDetails/{id}', function (\Illuminate\Http\Request $request){
     $item = \App\Models\Item::where('id', $itemId)->first();
     return view('pages.productDetails', ['item'=>$item]);
 });
+Route::get("/cart", [CartController::class, 'showCart'])->middleware(['auth']);
+Route::get("/cart/addItem/{item_id}", [CartController::class, 'addItem'])->middleware(['auth']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

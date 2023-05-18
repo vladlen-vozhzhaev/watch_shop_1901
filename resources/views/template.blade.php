@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Watch shop | eCommers</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -42,37 +42,14 @@
                 <div class="menu-wrapper">
 
                     <div class="logo">
-                        <a href="index.html"><img src="/assets/img/logo/logo.png" alt=""></a>
+                        <a href="/"><img src="/assets/img/logo/logo.png" alt=""></a>
                     </div>
 
                     <div class="main-menu d-none d-lg-block">
                         <nav>
                             <ul id="navigation">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">shop</a></li>
-                                <li><a href="about.html">about</a></li>
-                                <li class="hot"><a href="#">Latest</a>
-                                    <ul class="submenu">
-                                        <li><a href="shop.html"> Product list</a></li>
-                                        <li><a href="product_details.html"> Product Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html">Blog</a>
-                                    <ul class="submenu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="submenu">
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="elements.html">Element</a></li>
-                                        <li><a href="confirmation.html">Confirmation</a></li>
-                                        <li><a href="checkout.html">Product Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/">Главная</a></li>
+                                <li><a href="/shop">Товары</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -84,8 +61,8 @@
                                     <span class="flaticon-search"></span>
                                 </div>
                             </li>
-                            <li> <a href="login.html"><span class="flaticon-user"></span></a></li>
-                            <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li>
+                            <li> <a href="/login"><span class="flaticon-user"></span></a></li>
+                            <li><a href="/cart"><span class="flaticon-shopping-cart"></span></a> </li>
                         </ul>
                     </div>
                 </div>
@@ -111,7 +88,7 @@
                         <div class="single-footer-caption mb-30">
 
                             <div class="footer-logo">
-                                <a href="index.html"><img src="/assets/img/logo/logo2_footer.png" alt=""></a>
+                                <a href="/"><img src="/assets/img/logo/logo2_footer.png" alt=""></a>
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
@@ -224,15 +201,5 @@
 
 <script src="/assets/js/plugins.js"></script>
 <script src="/assets/js/main.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c7c594c2d017b53","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
